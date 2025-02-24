@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Birthday Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <h1><span>🎬</span> A Star's Special Day 🎬</h1>
+        <p>A tribute fit for a superstar—scroll down to experience the magic!</p>
+    </div>
+    
+    <section class="gallery">
+        <h2>📸 The Spotlight is on You 🎤</h2>
+        <div class="pic">
+            <div class="main">
+              <div class="single-column">
+                 <a href="#"><img src="1.jpg" alt="image"></a>
+                 <a href="#"><img src="3.jpg" alt="image"></a>
+                 <a href="#"><img src="2.jpg" alt="image"></a>
+                 <a href="#"><img src="4.jpg" alt="image"></a>
+             </div>
+             <div class="single-column">
+                 <a href="#"><img src="5.jpg" alt="image"></a>
+                 <a href="#"><img src="6.jpg" alt="image"></a>
+                 <a href="#"><img src="7.jpg" alt="image"></a>
+                 <a href="#"><img src="8.jpg" alt="image"></a>
+             </div>
+             <div class="single-column">
+                 <a href="#"><img src="9.jpg" alt="image"></a>
+                 <a href="#"><img src="10.jpg" alt="image"></a>
+                 <a href="#"><img src="11.jpg" alt="image"></a>
+                 <a href="#"><img src="12.jpg" alt="image"></a>
+             </div>
+             <div class="single-column">
+                 <a href="#"><img src="13.jpg" alt="image"></a>
+                 <a href="#"><img src="14.jpg" alt="image"></a>
+                 <a href="#"><img src="15.jpg" alt="image"></a>
+                 <a href="#"><img src="16.jpg" alt="image"></a>
+             </div>
+             </div>
+         </div>
+    </section>
+
+    <section class="srk-quotes">
+        <h2>💖Some Lines For You - SRK💖</h2>
+        <div class="carousel-container">
+            <div class="carousel-item active">
+                <p class="quote" style="color: red;">"You have a heart so pure and kind that it makes the world a better place just by you being in it."</p>
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjdoZGR0M3c2MHZtYzBrM3E5dTYwM3F3cXM0MHk4OTd1Z3ptMm11MCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/DS7jbVr1fvItO/giphy.gif" alt="SRK Gif">
+        
+            </div>
+            <div class="carousel-item">
+                <p class="quote" style="color: red;">"The way you care for others is a reflection of your beautiful soul. The world needs more people like you."</p>
+                <img src="https://media.giphy.com/media/PIIfwFGypvnlS/giphy.gif?cid=790b7611b7hddt3w60vmc0k3q9u603qwqs40y897ugzm2mu0&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="SRK Gif">
+            </div>
+            <div class="carousel-item">
+                <p class="quote" style="color: red;">"You have this incredible ability to turn ordinary moments into unforgettable memories. That’s how special you are."</p>
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjdoZGR0M3c2MHZtYzBrM3E5dTYwM3F3cXM0MHk4OTd1Z3ptMm11MCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/k1UfhN24sUnh6/giphy.gif" alt="SRK Gif">
+            </div>
+        </div>
+        <button class="play-btn" onclick="nextQuote()">Next</button>
+    </section>
+    </section>
+    
+    <section class="birthday-message ">
+        <a href="message.html"><h2>💌 A Special Message For You 💌 </h2></a>
+    </section>
+
+    <audio id="birthday-music" autoplay loop>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+   <!--<button onclick="document.getElementById('bg-music').play();">🎶 Play Birthday Music</button>-->
+     <script>window.addEventListener("DOMContentLoaded", () => {
+        const audio = document.getElementById("birthday-music");
+        audio.play().catch(error => console.log("Autoplay blocked. User interaction needed."));
+    });
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
