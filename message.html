@@ -318,10 +318,18 @@ text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
 </audio>
 
 <!--<button onclick="document.getElementById('bg-music').play();">🎶 Play Birthday Music</button>-->
- <script>window.addEventListener("DOMContentLoaded", () => {
-    const audio = document.getElementById("birthday-music");
-    audio.play().catch(error => console.log("Autoplay blocked. User interaction needed."));
-});
+<script>
+    document.addEventListener("click", () => {
+        const audio = document.getElementById("birthday-music");
+        if (audio.paused) {
+            audio.play().catch(error => console.log("Autoplay blocked."));
+        }
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const audio = document.getElementById("birthday-music");
+        audio.play().catch(error => console.log("Autoplay blocked. Click to play."));
+    });
 </script>
 
   <script src="script.js"></script>
