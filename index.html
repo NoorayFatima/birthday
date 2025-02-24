@@ -81,11 +81,19 @@
     </audio>
     
    <!--<button onclick="document.getElementById('bg-music').play();">🎶 Play Birthday Music</button>-->
-     <script>window.addEventListener("DOMContentLoaded", () => {
+   <script>
+    document.addEventListener("click", () => {
         const audio = document.getElementById("birthday-music");
-        audio.play().catch(error => console.log("Autoplay blocked. User interaction needed."));
+        if (audio.paused) {
+            audio.play().catch(error => console.log("Autoplay blocked."));
+        }
     });
-    </script>
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const audio = document.getElementById("birthday-music");
+        audio.play().catch(error => console.log("Autoplay blocked. Click to play."));
+    });
+</script>
     <script src="index.js"></script>
 </body>
 </html>
